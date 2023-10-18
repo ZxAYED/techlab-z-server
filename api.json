@@ -1,0 +1,317 @@
+{
+    "brands": [
+      {
+        "name": "Intel",
+        "image": "https://i.ibb.co/cLY59VZ/intel-hero.jpg",
+        "products": [
+          {
+            "image": "https://i.ibb.co/9yZRMP7/inteli7.jpg",
+            "name": "Intel Core i7 Processor",
+            "brandName": "Intel",
+            "type": "Processor",
+            "price": 299.99,
+            "rating": 4.5
+          },
+          {
+            "image": "https://i.ibb.co/sW4812V/intelssd.jpg",
+            "name": "Intel SSD 1TB",
+            "brandName": "Intel",
+            "type": "Technology",
+            "price": 149.99,
+            "rating": 4.2
+          },
+          {
+            "image": "https://i.ibb.co/RBTTSGz/itelnuc.jpg",
+            "name": "Intel NUC Mini PC",
+            "brandName": "Intel",
+            "type": "Computer",
+            "price": 399.99,
+            "rating": 4.7
+          },
+          {
+            "image": "https://i.ibb.co/PxMtGTg/intel-arca7770.png",
+            "name": "Intel Arc A7770 GPU",
+            "brandName": "Intel",
+            "type": "Graphics Card",
+            "price": 199.99,
+            "rating": 4.3
+          }
+        ],
+        "advertisements": [
+          {
+            "image": "https://i.ibb.co/9yZRMP7/inteli7.jpg",
+            "description": "Upgrade your computing experience with Intel's latest processors."
+          },
+          {
+            "image": "https://i.ibb.co/sW4812V/intelssd.jpg",
+            "description": "Boost your storage speed with Intel SSDs for faster data access."
+          },
+          {
+            "image": "intel_ad3.jpg",
+            "description": "Experience compact and powerful computing with Intel NUC Mini PCs."
+          }
+        ]
+      },
+      {
+        "name": "AMD",
+        "image": "https://i.ibb.co/J2xHXxw/amd-hero.jpg",
+        "products": [
+          {
+            "image": "https://i.ibb.co/DtVQfZG/ryzen-9.jpg",
+            "name": "AMD Ryzen 9 Processor",
+            "brandName": "AMD",
+            "type": "Processor",
+            "price": 349.99,
+            "rating": 4.6
+          },
+          {
+            "image": "https://i.ibb.co/cwwLMNc/ryzen-rx6800.jpg",
+            "name": "AMD Radeon RX 6800 XT",
+            "brandName": "AMD",
+            "type": "Graphics Card",
+            "price": 699.99,
+            "rating": 4.8
+          },
+          {
+            "image": "https://i.ibb.co/W33NbPD/ryzen-5.webp",
+            "name": "AMD Ryzen 5 Processor",
+            "brandName": "AMD",
+            "type": "Processor",
+            "price": 249.99,
+            "rating": 4.4
+          },
+          {
+            "image": "https://i.ibb.co/WFTDTsY/Radeon-RX-6700-XT.jpg",
+            "name": "AMD Radeon RX 6700 XT",
+            "brandName": "AMD",
+            "type": "Technology",
+            "price": 499.99,
+            "rating": 4.7
+          }
+        ],
+        "advertisements": [
+          {
+            "image": "amd_ad1.jpg",
+            "description": "Elevate your gaming experience with AMD Ryzen processors."
+          },
+          {
+            "image": "amd_ad2.jpg",
+            "description": "Unleash stunning graphics with AMD Radeon graphics cards."
+          },
+          {
+            "image": "amd_ad3.jpg",
+            "description": "Experience the power of AMD Ryzen processors for ultimate performance."
+          }
+        ]
+      },
+      {
+        "name": "Samsung",
+        "image": "https://i.ibb.co/VJGFLff/samsung-hero.png",
+        "products": [
+          {
+            "image": "https://i.ibb.co/THfVWVB/s21.jpg",
+            "name": "Samsung Galaxy S21",
+            "brandName": "Samsung",
+            "type": "Phone",
+            "price": 799.99,
+            "rating": 4.7
+          },
+          {
+            "image": "https://i.ibb.co/p0sPbvZ/samsuing-4k-tv.webp",
+            "name": "Samsung 4K Smart TV",
+            "brandName": "Samsung",
+            "type": "Television",
+            "price": 899.99,
+            "rating": 4.6
+          },
+          {
+            "image": "https://i.ibb.co/nPTZW4Y/tab-s7-samsung.jpg",
+            "name": "Samsung Galaxy Tab S7",
+            "brandName": "Samsung",
+            "type": "Tablet",
+            "price": 599.99,
+            "rating": 4.5
+          },
+          {
+            "image": "https://i.ibb.co/Gd8shjQ/samsung-monitor.webps",
+            "name": "Samsung 27-inch Monitor",
+            "brandName": "Samsung",
+            "type": "Monitor",
+            "price": 299.99,
+            "rating": 4.4
+          }
+        ],
+        "advertisements": [
+          {
+            "image": "samsung_ad1.jpg",
+            "description": "Discover the latest Samsung smartphones for an enhanced mobile experience."
+          },
+          {
+            "image": "samsung_ad2.jpg",
+            "description": "Experience stunning visuals with Samsung 4K Smart TVs."
+          },
+          {
+            "image": "samsung_ad3.jpg",
+            "description": "Stay productive with the Samsung Galaxy Tab S7 and 27-inch Monitor."
+          }
+        ]
+      },
+      {
+        "name": "Huawei",
+        "image": "https://i.ibb.co/CHkq02H/huawei-hero.jpg",
+        "products": [
+          {
+            "image": "https://i.ibb.co/y5RPG6r/huawei-p40pro.jpg",
+            "name": "Huawei P40 Pro",
+            "brandName": "Huawei",
+            "type": "Phone",
+            "price": 699.99,
+            "rating": 4.6
+          },
+          {
+            "image": "https://i.ibb.co/99NXryJ/matebook.jpg",
+            "name": "Huawei MateBook X Pro",
+            "brandName": "Huawei",
+            "type": "Computer",
+            "price": 1299.99,
+            "rating": 4.5
+          },
+          {
+            "image": "https://i.ibb.co/RhJMBYs/buds-pro.jpg",
+            "name": "Huawei FreeBuds Pro",
+            "brandName": "Huawei",
+            "type": "Headphones",
+            "price": 149.99,
+            "rating": 4.4
+          },
+          {
+            "image": "https://i.ibb.co/S3MxdqJ/gt2-watch.jpg",
+            "name": "Huawei Watch GT 2",
+            "brandName": "Huawei",
+            "type": "Smartwatch",
+            "price": 199.99,
+            "rating": 4.7
+          }
+        ],
+        "advertisements": [
+          {
+            "image": "https://i.ibb.co/y5RPG6r/huawei-p40pro.jpg",
+            "description": "Experience cutting-edge technology with Huawei smartphones."
+          },
+          {
+            "image": "https://i.ibb.co/99NXryJ/matebook.jpg",
+            "description": "Enhance your productivity with the Huawei MateBook X Pro."
+          },
+          {
+            "image": "https://i.ibb.co/S3MxdqJ/gt2-watch.jpg",
+            "description": "Immerse yourself in music with Huawei FreeBuds Pro and stay active with Huawei Watch GT 2."
+          }
+        ]
+      },
+      {
+        "name": "Xiaomi",
+        "image": "https://i.ibb.co/vc5Fg8L/xiaomi-hero.jpg",
+        "products": [
+          {
+            "image": "https://i.ibb.co/FDmC6Sq/xioami-11.jpg",
+            "name": "Xiaomi Mi 11",
+            "brandName": "Xiaomi",
+            "type": "Phone",
+            "price": 599.99,
+            "rating": 4.8
+          },
+          {
+            "image": "https://i.ibb.co/9HjSN8P/mi-tv.jpg",
+            "name": "Xiaomi Mi TV 4S",
+            "brandName": "Xiaomi",
+            "type": "Television",
+            "price": 499.99,
+            "rating": 4.6
+          },
+          {
+            "image": "https://i.ibb.co/88C0kPv/note-12.jpg",
+            "name": "Xiaomi Redmi Note 12",
+            "brandName": "Xiaomi",
+            "type": "SmartPhone",
+            "price": 299.99,
+            "rating": 4.7
+          },
+          {
+            "image": "https://i.ibb.co/jgQXDwM/mi-band.png",
+            "name": "Xiaomi Mi Band 6",
+            "brandName": "Xiaomi",
+            "type": "Fitness Tracker",
+            "price": 49.99,
+            "rating": 4.5
+          }
+        ],
+        "advertisements": [
+          {
+            "image": "https://i.ibb.co/FDmC6Sq/xioami-11.jpg",
+            "description": "Explore the world of Xiaomi with the Mi 11 smartphone."
+          },
+          {
+            "image": "https://i.ibb.co/9HjSN8P/mi-tv.jpg",
+            "description": "Transform your entertainment with Xiaomi Mi TV 4S."
+          },
+          {
+            "image": "https://i.ibb.co/88C0kPv/note-12.jpg",
+            "description": "Stay connected and active with Xiaomi Redmi Note 10 and Mi Band 6."
+          }
+        ]
+      },
+      {
+        "name": "Sony",
+        "image": "https://i.ibb.co/pKLBD1J/sony.webp",
+        "products": [
+          {
+            "image": "https://i.ibb.co/PskC1KY/xperia-1.jpg",
+            "name": "Sony Xperia 1 III",
+            "brandName": "Sony",
+            "type": "Phone",
+            "price": 999.99,
+            "rating": 4.7
+          },
+          {
+            "image": "https://i.ibb.co/ZdtybMT/bravia-tv.jpg",
+            "name": "Sony Bravia OLED TV",
+            "brandName": "Sony",
+            "type": "Television",
+            "price": 1499.99,
+            "rating": 4.8
+          },
+          {
+            "image": "https://i.ibb.co/Q8Wf9gd/sony-head.jpg",
+            "name": "Sony WH-1000XM4 Headphones",
+            "brandName": "Sony",
+            "type": "Headphones",
+            "price": 349.99,
+            "rating": 4.6
+          },
+          {
+            "image": "https://i.ibb.co/r2x6hk6/sony-camera.jpg",
+            "name": "Sony Alpha 7 III Camera",
+            "brandName": "Sony",
+            "type": "Camera",
+            "price": 1999.99,
+            "rating": 4.9
+          }
+        ],
+        "advertisements": [
+          {
+            "image": "https://i.ibb.co/PskC1KY/xperia-1.jpg",
+            "description": "Experience excellence with the Sony Xperia 1 III smartphone."
+          },
+          {
+            "image": "https://i.ibb.co/ZdtybMT/bravia-tv.jpg",
+            "description": "Immerse yourself in stunning visuals with the Sony Bravia OLED TV."
+          },
+          {
+            "image": "https://i.ibb.co/Q8Wf9gd/sony-head.jpg",
+            "description": "Enjoy superior sound quality with Sony WH-1000XM4 Headphones and capture memorable moments with Sony Alpha 7 III Camera."
+          }
+        ]
+      }
+    ]
+  }
+  

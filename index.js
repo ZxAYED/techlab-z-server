@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const express = require("express");
 const cors = require("cors");
@@ -7,6 +8,7 @@ const port = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json())
+
 
 
 
@@ -26,9 +28,30 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
+    const productsCollection = client.db('secure-protection').collection('products');
+    app.post('/newproduct',async(req,res)=>{
+      const newproduct=req.body;
+      console.log(newproduct);
+      const result =await productsCollection.insertOne(newproduct)
+      res.send(result)
+    })
+    app.get('/newproduct',async(req,res)=>{
+
+      const result =await productsCollection.find().toArray()
+      res.send(result)
+    })
+    app.delete('/newproduct',async(req,res)=>{
+      const id=req.params.id;
+      const query ={_id: new objectId(id)}
+      const result =await productsCollection.deleteOne(query);
+      req.send(result)
+    })
+
+
+
     await client.connect();
-    // Send a ping to confirm a successful connection
+    
+
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   }catch{
