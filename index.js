@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const express = require("express");
 const cors = require("cors");
 const app =express()
@@ -29,6 +29,9 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     const productsCollection = client.db('secure-protection').collection('products');
+    const brands = client.db('secure-protection').collection('brands');
+    const users = client.db('secure-protection').collection('users');
+    const branditems = client.db('secure-protection').collection('branditems');
     app.post('/newproduct',async(req,res)=>{
       const newproduct=req.body;
       console.log(newproduct);
@@ -36,17 +39,35 @@ async function run() {
       res.send(result)
     })
     app.get('/newproduct',async(req,res)=>{
-
+      
       const result =await productsCollection.find().toArray()
       res.send(result)
+     
     })
-    app.delete('/newproduct',async(req,res)=>{
+    app.get('/brandProducts',async(req,res)=>{
+      const reuslt =await brands.find().toArray()
+      res.send(reuslt)
+    })
+    app.get('/brandProducts/:id',async(req,res)=>{
+      const id =req.params.id
+    
+      const query = { _id:  (id)};
+      console.log(query);
+      const reuslt =await branditems.findOne(query)
+      res.send(reuslt)
+      console.log(reuslt);
+    })
+    app.delete('/newproduct/:id',async(req,res)=>{
       const id=req.params.id;
-      const query ={_id: new objectId(id)}
+      const query ={_id:new ObjectId(id)}
       const result =await productsCollection.deleteOne(query);
-      req.send(result)
+      res.send(result)
     })
-
+    app.post('/users',async(req,res)=>{
+      const user =req.body;
+      const result =await users.insertOne(user)
+      res.send(result)
+    })
 
 
     await client.connect();
