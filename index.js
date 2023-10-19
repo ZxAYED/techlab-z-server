@@ -32,6 +32,8 @@ async function run() {
     const brands = client.db('secure-protection').collection('brands');
     const users = client.db('secure-protection').collection('users');
     const branditems = client.db('secure-protection').collection('branditems');
+    const details = client.db('secure-protection').collection('details');
+    const update = client.db('secure-protection').collection('update');
 
 
     app.post('/newproduct',async(req,res)=>{
@@ -50,6 +52,7 @@ async function run() {
       const reuslt =await brands.find().toArray()
       res.send(reuslt)
     })
+ 
     app.get('/brandProducts/:id', async (req, res) => {
       const id = req.params.id;
     
@@ -57,8 +60,26 @@ async function run() {
       console.log(query);
     
       try {
-        const result =await  branditems.find(query); 
+        const result =await  branditems.find(query).toArray(); 
+        res.send(result);
+        console.log(result);
+      } catch (error) {
+        console.error(error);
+       
+      }
+    });
+    app.get('/details',async(req,res)=>{
+      const reuslt =await details.find().toArray()
+      res.send(reuslt)
+    })
+    app.get('/details/:id', async (req, res) => {
+      const id = req.params.id;
     
+      const query = { name: id };
+      console.log(query);
+    
+      try {
+        const result =await  details.find(query).toArray(); 
         res.send(result);
         console.log(result);
       } catch (error) {
@@ -74,9 +95,21 @@ async function run() {
     })
     app.post('/users',async(req,res)=>{
       const user =req.body;
+      const result =await update.insertOne(user)
+      res.send(result)
+      console.log(user);
+    })
+    app.post('/update',async(req,res)=>{
+      const user =req.body;
       const result =await users.insertOne(user)
       res.send(result)
       console.log(user);
+    })
+    app.get('/update',async(req,res)=>{
+      
+      const result =await update.find().toArray()
+      res.send(result)
+     
     })
 
 
