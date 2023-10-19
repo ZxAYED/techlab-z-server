@@ -32,6 +32,8 @@ async function run() {
     const brands = client.db('secure-protection').collection('brands');
     const users = client.db('secure-protection').collection('users');
     const branditems = client.db('secure-protection').collection('branditems');
+
+
     app.post('/newproduct',async(req,res)=>{
       const newproduct=req.body;
       console.log(newproduct);
@@ -48,15 +50,22 @@ async function run() {
       const reuslt =await brands.find().toArray()
       res.send(reuslt)
     })
-    app.get('/brandProducts/:id',async(req,res)=>{
-      const id =req.params.id
+    app.get('/brandProducts/:id', async (req, res) => {
+      const id = req.params.id;
     
-      const query = { _id:  (id)};
+      const query = { brandName: id };
       console.log(query);
-      const reuslt =await branditems.findOne(query)
-      res.send(reuslt)
-      console.log(reuslt);
-    })
+    
+      try {
+        const result =await  branditems.find(query); 
+    
+        res.send(result);
+        console.log(result);
+      } catch (error) {
+        console.error(error);
+       
+      }
+    });
     app.delete('/newproduct/:id',async(req,res)=>{
       const id=req.params.id;
       const query ={_id:new ObjectId(id)}
@@ -67,6 +76,7 @@ async function run() {
       const user =req.body;
       const result =await users.insertOne(user)
       res.send(result)
+      console.log(user);
     })
 
 
